@@ -1,0 +1,199 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+$fonts-directory: 'https://assets.oneweb.mercedes-benz.com/global/1.16.0/fonts/';
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'DaimlerCS';
+	font-weight: 300;
+	src: url($fonts-directory + 'EOT/DaimlerCS-Light.eot'); // IE9 Compat Modes
+	src: url($fonts-directory + 'EOT/DaimlerCS-Light.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+	url($fonts-directory + 'WOFF2/DaimlerCS-Light.woff2') format('woff2'), // Super Modern Browsers
+	url($fonts-directory + 'WOFF/DaimlerCS-Light.woff') format('woff'), // Pretty Modern Browsers
+	url($fonts-directory + 'TTF/DaimlerCS-Light.ttf') format('truetype'), // Safari, Android, iOS
+	url($fonts-directory + 'SVG/DaimlerCS-Light.svg#DaimlerCS-Light') format('svg'); // Legacy iOS
+}
+
+@font-face {
+	font-family: 'DaimlerCS';
+	font-weight: 300;
+	font-style: italic;
+	src: url($fonts-directory + 'EOT/DaimlerCS-LightItalic.eot'); // IE9 Compat Modes
+	src: url($fonts-directory + 'EOT/DaimlerCS-LightItalic.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+	url($fonts-directory + 'WOFF2/DaimlerCS-LightItalic.woff2') format('woff2'), // Super Modern Browsers
+	url($fonts-directory + 'WOFF/DaimlerCS-LightItalic.woff') format('woff'), // Pretty Modern Browsers
+	url($fonts-directory + 'TTF/DaimlerCS-LightItalic.ttf') format('truetype'), // Safari, Android, iOS
+	url($fonts-directory + 'SVG/DaimlerCS-LightItalic.svg#DaimlerCS-LightItalic') format('svg'); // Legacy iOS
+}
+
+@font-face {
+	font-family: 'DaimlerCS';
+	src: url($fonts-directory + 'EOT/DaimlerCS-Regular.eot'); // IE9 Compat Modes
+	src: url($fonts-directory + 'EOT/DaimlerCS-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+	url($fonts-directory + 'WOFF2/DaimlerCS-Regular.woff2') format('woff2'), // Super Modern Browsers
+	url($fonts-directory + 'WOFF/DaimlerCS-Regular.woff') format('woff'), // Pretty Modern Browsers
+	url($fonts-directory + 'TTF/DaimlerCS-Regular.ttf') format('truetype'), // Safari, Android, iOS
+	url($fonts-directory + 'SVG/DaimlerCS-Regular.svg#DaimlerCS-Regular') format('svg'); // Legacy iOS
+}
+
+@font-face {
+	font-family: 'DaimlerCS';
+	font-style: italic;
+	src: url($fonts-directory + 'EOT/DaimlerCS-Italic.eot'); // IE9 Compat Modes
+	src: url($fonts-directory + 'EOT/DaimlerCS-Italic.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+	url($fonts-directory + 'WOFF2/DaimlerCS-Italic.woff2') format('woff2'), // Super Modern Browsers
+	url($fonts-directory + 'WOFF/DaimlerCS-Italic.woff') format('woff'), // Pretty Modern Browsers
+	url($fonts-directory + 'TTF/DaimlerCS-Italic.ttf') format('truetype'), // Safari, Android, iOS
+	url($fonts-directory + 'SVG/DaimlerCS-Italic.svg#DaimlerCS-Italic') format('svg'); // Legacy iOS
+}
+
+@font-face {
+	font-family: 'DaimlerCS';
+	font-weight: 600;
+	src: url($fonts-directory + 'EOT/DaimlerCS-Demi.eot'); // IE9 Compat Modes
+	src: url($fonts-directory + 'EOT/DaimlerCS-Demi.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+	url($fonts-directory + 'WOFF2/DaimlerCS-Demi.woff2') format('woff2'), // Super Modern Browsers
+	url($fonts-directory + 'WOFF/DaimlerCS-Demi.woff') format('woff'), // Pretty Modern Browsers
+	url($fonts-directory + 'TTF/DaimlerCS-Demi.ttf') format('truetype'), // Safari, Android, iOS
+	url($fonts-directory + 'SVG/DaimlerCS-Demi.svg#DaimlerCS-Demi') format('svg'); // Legacy iOS
+}
+
+@font-face {
+	font-family: 'DaimlerCS';
+	font-weight: 600;
+	font-style: italic;
+	src: url($fonts-directory + 'EOT/DaimlerCS-DemiItalic.eot'); // IE9 Compat Modes
+	src: url($fonts-directory + 'EOT/DaimlerCS-DemiItalic.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+	url($fonts-directory + 'WOFF2/DaimlerCS-DemiItalic.woff2') format('woff2'), // Super Modern Browsers
+	url($fonts-directory + 'WOFF/DaimlerCS-DemiItalic.woff') format('woff'), // Pretty Modern Browsers
+	url($fonts-directory + 'TTF/DaimlerCS-DemiItalic.ttf') format('truetype'), // Safari, Android, iOS
+	url($fonts-directory + 'SVG/DaimlerCS-DemiItalic.svg#DaimlerCS-DemiItalic') format('svg'); // Legacy iOS
+}
+
+@font-face {
+	font-family: 'DaimlerCS';
+	font-weight: bold;
+	src: url($fonts-directory + 'EOT/DaimlerCS-Bold.eot'); // IE9 Compat Modes
+	src: url($fonts-directory + 'EOT/DaimlerCS-Bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+	url($fonts-directory + 'WOFF2/DaimlerCS-Bold.woff2') format('woff2'), // Super Modern Browsers
+	url($fonts-directory + 'WOFF/DaimlerCS-Bold.woff') format('woff'), // Pretty Modern Browsers
+	url($fonts-directory + 'TTF/DaimlerCS-Bold.ttf') format('truetype'), // Safari, Android, iOS
+	url($fonts-directory + 'SVG/DaimlerCS-Bold.svg#DaimlerCS-Bold') format('svg'); // Legacy iOS
+}
+
+@font-face {
+	font-family: 'DaimlerCS';
+	font-weight: bold;
+	font-style: italic;
+	src: url($fonts-directory + 'EOT/DaimlerCS-BoldItalic.eot'); // IE9 Compat Modes
+	src: url($fonts-directory + 'EOT/DaimlerCS-BoldItalic.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+	url($fonts-directory + 'WOFF2/DaimlerCS-BoldItalic.woff2') format('woff2'), // Super Modern Browsers
+	url($fonts-directory + 'WOFF/DaimlerCS-BoldItalic.woff') format('woff'), // Pretty Modern Browsers
+	url($fonts-directory + 'TTF/DaimlerCS-BoldItalic.ttf') format('truetype'), // Safari, Android, iOS
+	url($fonts-directory + 'SVG/DaimlerCS-BoldItalic.svg#DaimlerCS-BoldItalic') format('svg'); // Legacy iOS
+}
+
+@font-face {
+	font-family: 'DaimlerCAC-Regular';
+	font-display: swap;
+	src: url($fonts-directory + 'EOT/DaimlerCAC-Regular.eot'); // IE9 Compat Modes
+	src: url($fonts-directory + 'EOT/DaimlerCAC-Regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+	url($fonts-directory + 'WOFF2/DaimlerCAC-Regular.woff2') format('woff2'), // Super Modern Browsers
+	url($fonts-directory + 'WOFF/DaimlerCAC-Regular.woff') format('woff'), // Pretty Modern Browsers
+	url($fonts-directory + 'TTF/DaimlerCAC-Regular.ttf') format('truetype'), // Safari, Android, iOS
+	url($fonts-directory + 'SVG/DaimlerCAC-Regular.svg#DaimlerCAC-Regular') format('svg'); // Legacy iOS
+}
+
+:root {
+	--primary-color: #05030B;
+	--secondary-color: #fff;
+	--logo-src: url(../../img/logo_white.svg);
+  }
+  
+  .light-theme {
+	--primary-color: #fff;
+	--secondary-color: #05030B;
+	--logo-src: url(../../img/logo_black.svg);
+  }
+  
+  .dark-logo{
+	display: none;
+  }
+  
+  .light-theme .dark-logo{
+	display: block;
+  }
+  
+  .light-theme .light-logo{
+	display: none;
+  }
+  
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: var(--primary-color);
+
+$mainColor:var(--secondary-color);
+$headingColor: var(--secondary-color);
+
+$mainFontSize: 42px;
+$mainFont: DaimlerCS, Helvetica, sans-serif;
+$headingFont: 'DaimlerCAC-Regular', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: normal;
+$linkColor: #00adef;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #00adef;
+	}
+}
+
+.reveal {
+	&:before {
+		content: '';
+		height: 4vh;
+		width: 20vw;
+		display: block;
+		position: absolute;
+		bottom: .5em;
+		left: .5em;
+		background-size: contain;
+		background-image: var(--logo-src);
+		background-position: bottom left;
+		background-repeat: no-repeat;
+		z-index: 99;
+	}
+  &.has-darker-background:before {
+    background-image: url(../../img/logo_white.svg);
+  }
+
+	.main-title {
+		color: $linkColor;
+	}
+}
+
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------

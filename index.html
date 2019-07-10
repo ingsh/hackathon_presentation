@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Mercedes-Benz.io - Hachathon</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/mercedes.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.type = 'text/css'
+      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css'
+      document.getElementsByTagName('head')[0].appendChild(link)
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+
+        <!-- CAPA -->
+        <section>
+            <section data-markdown>
+                ## Hackathon
+
+            </section>
+        </section>
+
+
+        <!-- MB.io -->
+            <section>
+                <img src="img/logo_white.svg"
+                     class="plain light-logo" style="width: 80%; background-color: transparent">
+                <img src="img/logo_black.svg"
+                     class="plain dark-logo" style="width: 80%; background-color: transparent">
+                <aside class="notes">
+                    <p>Company from Daimler Group</p>
+                    <p>What we do? - Mercedes-benz website with all web applications it provides and e-commerce platfrom and Mercedes.me</p>
+                    <p>Projects Examples: Car Configurator, Vehicle Search, Dealer Locator, Test Drive ,Marketplace </p>
+                </aside>
+            </section>
+            <section>
+                <img src="img/locations.png"
+                     style="border: 0; background-color: transparent; max-width: 100%; max-height: 100%;">
+                <aside class="notes">
+                    <p>Talk about our locations. Berlin, Lisbon, Stuttgart, Singapure(can we talk about it?)</p>
+                </aside>  
+            </section>
+            <section>
+                <img src="img/mbpt.png" style="border: 0; background-color: transparent;">
+            </section>
+        </section>
+        <!-- Challenge -->
+        <section>
+            <section>
+                <h1> Challenge </h1>
+                <p>Create a page for Ownconf conference</p>
+                <p>conference logo(?)</p>
+                <aside class="notes">
+                    <p>Quick conference description</p>
+                </aside>
+            </section>
+            <section>
+                <h1>Structure suggestion</h1>
+                <p class="fragment fade-up">Home Page</p>
+                <p class="fragment fade-up">Speakers/Talks</p>
+                <p class="fragment fade-up">Schedule</p>
+                <p class="fragment fade-up">Info(Maps, Services, etc...)</p>
+                <p class="fragment fade-up">Sponsors(?)</p>
+                <aside class="notes">
+                    <p>You're free to do your own structure this is just some suggestion/guidance</p>
+                </aside>
+            </section>
+            <section>
+                <h1>Endpoints</h1>
+                <a href="https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd/1" target="_blank"><p>Json Endpoint</p></a>
+                <iframe style="width: 100%;height: 40vh;" src="http://jsonviewer.stack.hu/#http://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd/1"></iframe>
+                <aside class="notes">
+                    <p>Explain a bit of the data structure</p>
+                </aside>
+            </section>
+            <section>
+                <h1>Assets</h1>
+                <p>some link to assets we can provide like conf logo(?)</p>
+
+            </section>
+        </section>
+        <!-- Thank you -->
+        <section>
+            <section>
+                <div style="font-size: 1.5em; font-family: 'DaimlerCAC-Regular', serif; padding-top: 1em;">
+                    <a href="http://www.mercedes-benz.io" style="color: white;" target="_blank">
+                        <img src="img/logo_white.svg"
+                        class="plain light-logo" style="width: 80%; background-color: transparent">
+                        <img src="img/logo_black.svg"
+                        class="plain dark-logo" style="width: 80%; background-color: transparent">
+                     </a>
+                </div>
+            </section>
+            <section>
+                <p>Thank you and Good luck!</p>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/MbVehicle.component.js"></script>
+
+<script>
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize({
+    dependencies: [
+      {src: 'plugin/markdown/marked.js'},
+      {src: 'plugin/markdown/markdown.js'},
+      {src: 'plugin/notes/notes.js', async: true},
+      {src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad() }}
+    ]
+  })
+  Reveal.configure({
+    pdfSeparateFragments: false,
+    fragmentInURL: true,
+    slideNumber: true,
+    keyboard: {
+        84: function () {
+            const docClasses = document.documentElement.classList
+            if (docClasses.contains('light-theme')) docClasses.remove('light-theme')
+            else docClasses.add('light-theme')
+        }
+    }
+  })
+</script>
+</body>
+</html>
