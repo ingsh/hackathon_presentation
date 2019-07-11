@@ -62,7 +62,19 @@
             <section>
                 <h2> Challenge </h2>
                 <p>Owl conf</p>
-                <span style="font-size: 22px;">Bring it owl. The Owl was a symbol for Athena, goddess of wisdom and strategy. The OwlConf brings out the strategic knowledge to a business perspective within MB.io.
+                <iframe class="fragment slide-up" src="https://giphy.com/embed/EdRgVzb2X3iJW" width="480" height="330" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <aside class="notes">
+                    <p>Quick conference description</p>
+                </aside>
+            </section>
+            <section>
+                <div style="width:100%; text-align: center">
+                    <img src="img/owl-dark.png"
+                        class="plain light-logo" style="height: 40vh; background-color: transparent; margin: auto">
+                    <img src="img/owl-light.png"
+                        class="plain dark-logo" style="height: 40vh; background-color: transparent; margin: auto">
+                </div>
+                <span style="font-size: 20px;">Bring it owl. The Owl was a symbol for Athena, goddess of wisdom and strategy. The OwlConf brings out the strategic knowledge to a business perspective within MB.io.
                  Together we will check out the current state of development at MB.io to get a grasp of the amazing technical achievements we provide on a daily basis in each of the different products. </span>
                 <aside class="notes">
                     <p>Quick conference description</p>
@@ -82,7 +94,10 @@
             <section>
                 <h1>Endpoints</h1>
                 <a href="https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd/1" target="_blank"><p>Json Endpoint</p></a>
-                <iframe style="width: 100%;height: 40vh;" src="http://jsonviewer.stack.hu/#http://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd/1"></iframe>
+                <!--<iframe style="width: 100%;height: 40vh;" src="https://jsonviewer.stack.hu/#http://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd/1"></iframe>-->
+                <div id="json" style="width: 100%;height: 40vh; overflow: auto;">
+                    <pre></pre>
+                </div>
                 <aside class="notes">
                     <p>Explain a bit of the data structure</p>
                 </aside>
@@ -114,6 +129,7 @@
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
 <script src="js/MbVehicle.component.js"></script>
+<script src="js/json-formatter/json-formatter.js"></script>
 
 <script>
   // More info about config & dependencies:
@@ -139,6 +155,12 @@
         }
     }
   })
+
+  fetch('https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd/1')
+    .then( resp => resp.json())
+    .then(data => {
+        document.querySelector('#json pre').innerHTML = JSON.stringify(data, null, 4);
+    })
 </script>
 </body>
 </html>
